@@ -37,7 +37,7 @@ The first argument is a function that takes two integer parameters.
 When the compiler can deduce the type of the result of a lambda function, one can 
 omit the result type:
 ```cpp
-// Results to 32
+// Results to 600
 int val = evaluate([] (int x, int y) {return 3*x*y;}, 10, 20);
 
 // Results to 6
@@ -57,7 +57,7 @@ that variable at a later time.
 
 Lambda functions can be used to create __closures__.  
 A __closure__ is a unit of code that can capture variables from its sorrounding 
-context. These captured variables then can be used outside if their original 
+context. These captured variables then can be used outside of their original 
 context.
 
 ## Exploring Function Objects
@@ -106,7 +106,7 @@ In this case, the `evaluate2` function can see `value_a's` value even though `va
 
 One can say the lambda function __captures__ the variable `value_a`. When 
 `evaluate2` invokes the function sent by the caller, `evaluate2` has no access to 
-a variable named `value_a`. The `value_a` involved in the conditional expression i
+a variable named `value_a`. The `value_a` involved in the conditional expression 
 is captured from `main`. This is an example of a _closure transporting a captured 
 variable into a function call_.
 
@@ -130,10 +130,11 @@ int main()
 Ordinarily when a function returns, all of its local variables disappear. This 
 means that after the following statement in the main function executes: 
 ```cpp
+auto function = make_adder();
 ```
 `make_adder's` `local_value` variable should no longer exist. The function that 
 `make_adder`, however, returns forms a closure that captures `make_adder's` 
-local variable `local_value`.#
+local variable `local_value`.
 
 C++'s lambda capture mechanism provides capabilities that go beyond examples given.
 For example, the expression `&value` within square brackets would capture variable 
@@ -171,9 +172,10 @@ std::cout << 6 << "\n";
 ```
 
 As a more practical example using a lambda function and a closure, consider the 
-calculation of a derivative. 
+calculation of a derivative.
+ 
 $$
-\(f'(a)\) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
 $$
 
 Based on the mathematical definition, we can define a C++ function that computes 
@@ -197,6 +199,8 @@ different formula.
 
 $$
 f(x) = 3x^2 + 5
+$$
+$$
 f'(x) = 6x
 $$
 
