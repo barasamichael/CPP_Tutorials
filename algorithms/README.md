@@ -6,52 +6,52 @@ Here's a table grouping the functions by their respective libraries, along with 
 
 | Function Name      | Header File         | Explanation                                                                                    |
 |--------------------|---------------------|------------------------------------------------------------------------------------------------|
-| for_each           | `<algorithm>`       | ```cpp std::for_each(Iterator first, Iterator last, UnaryFunction f)``` - Applies the given function `f` to each element in the range `[first, last)`.             |
-| iota               | `<numeric>`         | ```cpp std::iota(ForwardIterator first, ForwardIterator last, T value)``` - Fills a range with a series of incrementing values starting from `value`.             |
-| find               | `<algorithm>`       | ```cpp std::find(Iterator first, Iterator last, const T& value)``` - Searches for the first occurrence of `value` in the range `[first, last)`.                |
-| copy               | `<algorithm>`       | ```cpp std::copy(InputIterator first, InputIterator last, OutputIterator result)``` - Copies elements from one range to another.                                  |
-| transform          | `<algorithm>`       | ```cpp std::transform(InputIterator first1, InputIterator last1, InputIterator first2, OutputIterator result, BinaryOperation binary_op)``` - Applies a binary operation to corresponding elements in two ranges and stores the result in a third range. |
-| accumulate         | `<numeric>`         | ```cpp std::accumulate(InputIterator first, InputIterator last, T init)``` - Computes the sum of elements in the given range, optionally with an initial value.   |
+| for_each           | `<algorithm>`       | `std::for_each(Iterator first, Iterator last, UnaryFunction f)` - Applies the given function `f` to each element in the range `[first, last)`.             |
+| iota               | `<numeric>`         | `std::iota(ForwardIterator first, ForwardIterator last, T value)` - Fills a range with a series of incrementing values starting from `value`.             |
+| find               | `<algorithm>`       | `std::find(Iterator first, Iterator last, const T& value)` - Searches for the first occurrence of `value` in the range `[first, last)`.                |
+| copy               | `<algorithm>`       | `std::copy(InputIterator first, InputIterator last, OutputIterator result)` - Copies elements from one range to another.                                  |
+| transform          | `<algorithm>`       | `std::transform(InputIterator first1, InputIterator last1, InputIterator first2, OutputIterator result, BinaryOperation binary_op)` - Applies a binary operation to corresponding elements in two ranges and stores the result in a third range. |
+| accumulate         | `<numeric>`         | `std::accumulate(InputIterator first, InputIterator last, T init)` - Computes the sum of elements in the given range, optionally with an initial value.   |
 
 **Iterator Library:**
 
 | Function Name      | Header File         | Explanation                                                                                    |
 |--------------------|---------------------|------------------------------------------------------------------------------------------------|
-| ostream_iterator   | `<iterator>`        | ```cpp std::ostream_iterator<T>``` - An iterator that writes elements to an output stream. Used with `std::copy` or `std::transform` for output.              |
+| ostream_iterator   | `<iterator>`        | `std::ostream_iterator<T>` - An iterator that writes elements to an output stream. Used with `std::copy` or `std::transform` for output.              |
 
 **Numeric Library:**
 
 | Function Name      | Header File         | Explanation                                                                                    |
 |--------------------|---------------------|------------------------------------------------------------------------------------------------|
-| count              | `<algorithm>`       | ```cpp std::count(InputIterator first, InputIterator last, const T& value)``` - Counts the occurrences of `value` in the range `[first, last)`.            |
-| count_if           | `<algorithm>`       | ```cpp std::count_if(InputIterator first, InputIterator last, UnaryPredicate pred)``` - Counts the elements in the range `[first, last)` that satisfy the given predicate. |
+| count              | `<algorithm>`       | `std::count(InputIterator first, InputIterator last, const T& value)` - Counts the occurrences of `value` in the range `[first, last)`.            |
+| count_if           | `<algorithm>`       | `std::count_if(InputIterator first, InputIterator last, UnaryPredicate pred)` - Counts the elements in the range `[first, last)` that satisfy the given predicate. |
 | accumulate         | `<numeric>`         | (Already mentioned in Algorithm Library)                                                     |
-| partial_sum        | `<numeric>`         | ```cpp std::partial_sum(InputIterator first, InputIterator last, OutputIterator result)``` - Computes the partial sum of elements in the given range.     |
-| inner_product      | `<numeric>`         | ```cpp std::inner_product(InputIterator1 first1, InputIterator1 last1, InputIterator2 first2, T init)``` - Computes the inner product of two ranges.        |
+| partial_sum        | `<numeric>`         | `std::partial_sum(InputIterator first, InputIterator last, OutputIterator result)` - Computes the partial sum of elements in the given range.     |
+| inner_product      | `<numeric>`         | `std::inner_product(InputIterator1 first1, InputIterator1 last1, InputIterator2 first2, T init)` - Computes the inner product of two ranges.        |
 
 **Container Library:**
 
 | Function Name      | Header File         | Explanation                                                                                    |
 |--------------------|---------------------|------------------------------------------------------------------------------------------------|
-| copy_if            | `<algorithm>`       | ```cpp std::copy_if(InputIterator first, InputIterator last, OutputIterator result, UnaryPredicate pred)``` - Copies elements from one range to another, but only if they satisfy the given predicate. |
-| shuffle            | `<algorithm>`       | ```cpp std::shuffle(RandomAccessIterator first, RandomAccessIterator last, RandomNumberGenerator&& g)``` - Randomly shuffles the elements in the range `[first, last)`. |
-| generate           | `<algorithm>`       | ```cpp std::generate(ForwardIterator first, ForwardIterator last, Generator g)``` - Generates values for a range using a generator function `g`.             |
-| partition          | `<algorithm>`       | ```cpp std::partition(BidirectionalIterator first, BidirectionalIterator last, UnaryPredicate pred)``` - Divides a range into two groups based on a predicate.    |
-| remove             | `<algorithm>`       | ```cpp std::remove(ForwardIterator first, ForwardIterator last, const T& value)``` - Removes all occurrences of `value` from the range `[first, last)`.        |
-| remove_if          | `<algorithm>`       | ```cpp std::remove_if(ForwardIterator first, ForwardIterator last, UnaryPredicate pred)``` - Removes elements from the range `[first, last)` that satisfy the given predicate. |
-| reverse            | `<algorithm>`       | ```cpp std::reverse(BidirectionalIterator first, BidirectionalIterator last)``` - Reverses the order of elements in the range `[first, last)`.                |
+| copy_if            | `<algorithm>`       | `std::copy_if(InputIterator first, InputIterator last, OutputIterator result, UnaryPredicate pred)` - Copies elements from one range to another, but only if they satisfy the given predicate. |
+| shuffle            | `<algorithm>`       | `std::shuffle(RandomAccessIterator first, RandomAccessIterator last, RandomNumberGenerator&& g)` - Randomly shuffles the elements in the range `[first, last)`. |
+| generate           | `<algorithm>`       | `std::generate(ForwardIterator first, ForwardIterator last, Generator g)` - Generates values for a range using a generator function `g`.             |
+| partition          | `<algorithm>`       | `std::partition(BidirectionalIterator first, BidirectionalIterator last, UnaryPredicate pred)` - Divides a range into two groups based on a predicate.    |
+| remove             | `<algorithm>`       | `std::remove(ForwardIterator first, ForwardIterator last, const T& value)` - Removes all occurrences of `value` from the range `[first, last)`.        |
+| remove_if          | `<algorithm>`       | `std::remove_if(ForwardIterator first, ForwardIterator last, UnaryPredicate pred)` - Removes elements from the range `[first, last)` that satisfy the given predicate. |
+| reverse            | `<algorithm>`       | `std::reverse(BidirectionalIterator first, BidirectionalIterator last)` - Reverses the order of elements in the range `[first, last)`.                |
 
 **Predicate Library:**
 
 | Function Name      | Header File         | Explanation                                                                                    |
 |--------------------|---------------------|------------------------------------------------------------------------------------------------|
-| all_of             | `<algorithm>`       | ```cpp std::all_of(InputIterator first, InputIterator last, UnaryPredicate pred)``` - Checks if all elements in the range `[first, last)` satisfy the given predicate. |
-| none_of            | `<algorithm>`       | ```cpp std::none_of(InputIterator first, InputIterator last, UnaryPredicate pred)``` - Checks if none of the elements in the range `[first, last)` satisfy the given predicate. |
-| any_of             | `<algorithm>`       | ```cpp std::any_of(InputIterator first, InputIterator last, UnaryPredicate pred)``` - Checks if at least one element in the range `[first, last)` satisfies the given predicate. |
+| all_of             | `<algorithm>`       | `std::all_of(InputIterator first, InputIterator last, UnaryPredicate pred)` - Checks if all elements in the range `[first, last)` satisfy the given predicate. |
+| none_of            | `<algorithm>`       | `std::none_of(InputIterator first, InputIterator last, UnaryPredicate pred)` - Checks if none of the elements in the range `[first, last)` satisfy the given predicate. |
+| any_of             | `<algorithm>`       | `std::any_of(InputIterator first, InputIterator last, UnaryPredicate pred)` - Checks if at least one element in the range `[first, last)` satisfies the given predicate. |
 | find_if            | `<algorithm>`       | (Already mentioned in Algorithm Library)                                                     |
 
 
-**Algorithm:** for_each
+**Algorithm:** for_each  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class Function>
@@ -61,7 +61,7 @@ Function std::for_each(InputIterator first, InputIterator last, Function func);
 
 ---
 
-**Algorithm:** iota
+**Algorithm:** iota  
 **Library:** Standard Library
 ```cpp
 template <class ForwardIterator, class T>
@@ -71,7 +71,7 @@ void std::iota(ForwardIterator first, ForwardIterator last, T value);
 
 ---
 
-**Algorithm:** find
+**Algorithm:** find  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class T>
@@ -81,7 +81,7 @@ InputIterator std::find(InputIterator first, InputIterator last, const T& value)
 
 ---
 
-**Algorithm:** copy
+**Algorithm:** copy  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class OutputIterator>
@@ -91,7 +91,7 @@ OutputIterator std::copy(InputIterator first, InputIterator last, OutputIterator
 
 ---
 
-**Algorithm:** transform
+**Algorithm:** transform  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class OutputIterator, class UnaryOperation>
@@ -101,7 +101,7 @@ OutputIterator std::transform(InputIterator first1, InputIterator last1, OutputI
 
 ---
 
-**Algorithm:** ostream_iterator
+**Algorithm:** ostream_iterator  
 **Library:** Standard Library
 ```cpp
 template <class T, class CharT = char, class Traits = std::char_traits<CharT>>
@@ -111,7 +111,7 @@ class std::ostream_iterator;
 
 ---
 
-**Algorithm:** count
+**Algorithm:** count  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class T>
@@ -122,7 +122,7 @@ std::count(InputIterator first, InputIterator last, const T& value);
 
 ---
 
-**Algorithm:** count_if
+**Algorithm:** count_if  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class UnaryPredicate>
@@ -133,7 +133,7 @@ std::count_if(InputIterator first, InputIterator last, UnaryPredicate pred);
 
 ---
 
-**Algorithm:** copy_if
+**Algorithm:** copy_if  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -143,7 +143,7 @@ OutputIterator std::copy_if(InputIterator first, InputIterator last, OutputItera
 
 ---
 
-**Algorithm:** shuffle
+**Algorithm:** shuffle  
 **Library:** Standard Library
 ```cpp
 template <class RandomAccessIterator, class RandomNumberGenerator>
@@ -153,7 +153,7 @@ void std::shuffle(RandomAccessIterator first, RandomAccessIterator last, RandomN
 
 ---
 
-**Algorithm:** generate
+**Algorithm:** generate  
 **Library:** Standard Library
 ```cpp
 template <class ForwardIterator, class Generator>
@@ -163,7 +163,7 @@ void std::generate(ForwardIterator first, ForwardIterator last, Generator gen);
 
 ---
 
-**Algorithm:** accumulate
+**Algorithm:** accumulate  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class T>
@@ -173,7 +173,7 @@ T std::accumulate(InputIterator first, InputIterator last, T init);
 
 ---
 
-**Algorithm:** partition
+**Algorithm:** partition  
 **Library:** Standard Library
 ```cpp
 template <class ForwardIterator, class UnaryPredicate>
@@ -183,7 +183,7 @@ ForwardIterator std::partition(ForwardIterator first, ForwardIterator last, Unar
 
 ---
 
-**Algorithm:** remove
+**Algorithm:** remove  
 **Library:** Standard Library
 ```cpp
 template <class ForwardIterator, class T>
@@ -193,7 +193,7 @@ ForwardIterator std::remove(ForwardIterator first, ForwardIterator last, const T
 
 ---
 
-**Algorithm:** remove_if
+**Algorithm:** remove_if  
 **Library:** Standard Library
 ```cpp
 template <class ForwardIterator, class UnaryPredicate>
@@ -203,7 +203,7 @@ ForwardIterator std::remove_if(ForwardIterator first, ForwardIterator last, Unar
 
 ---
 
-**Algorithm:** reverse
+**Algorithm:** reverse  
 **Library:** Standard Library
 ```cpp
 template <class BidirectionalIterator>
@@ -213,7 +213,7 @@ void std::reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ---
 
-**Algorithm:** all_of
+**Algorithm:** all_of  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class UnaryPredicate>
@@ -225,7 +225,7 @@ bool std::all_of(InputIterator first, InputIterator last, UnaryPredicate pred);
 
 ---
 
-**Algorithm:** none_of
+**Algorithm:** none_of  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class UnaryPredicate>
@@ -235,7 +235,7 @@ bool std::none_of(InputIterator first, InputIterator last, UnaryPredicate pred);
 
 ---
 
-**Algorithm:** any_of
+**Algorithm:** any_of  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class UnaryPredicate>
@@ -245,7 +245,7 @@ bool std::any_of(InputIterator first, InputIterator last, UnaryPredicate pred);
 
 ---
 
-**Algorithm:** find_if
+**Algorithm:** find_if  
 **Library:** Standard Library
 ```cpp
 template <class InputIterator, class UnaryPredicate>
